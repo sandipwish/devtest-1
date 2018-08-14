@@ -1,12 +1,9 @@
 # Dev Test 1
 
 ## Scenario
-You have taken up maintenance on an application created by another developer.
-
-This application has a function that generates a CSV report based on a list of customers.
-
-The users are complaining that the CSV report takes 10 seconds or more to generate.
-
+You have taken up maintenance on an application created by another developer.  
+This application has a function that generates a CSV report based on a list of customers.  
+The users are complaining that the CSV report takes 10 seconds or more to generate.  
 They would like report to generate in 2 seconds or less.
 
 ## Your Task
