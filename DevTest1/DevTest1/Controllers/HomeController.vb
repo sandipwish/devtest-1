@@ -9,19 +9,16 @@
 
     Function CsvReport() As ActionResult
 
+        Dim csv As StringBuilder = New StringBuilder()
+        csv.Append(String.Format("{0},{1},{2}", "Company", "Name", "EmailAddress") & Environment.NewLine)
+
         Dim list As List(Of Customer) = Customer.CreateList()
 
-        Dim csvHeader As String = "Company, Name, EmailAddress" & vbCr
-        Dim csvBody As String = ""
-
-        'build body
         For Each c As Customer In list
-            csvBody &= c.Company & ", "
-            csvBody &= c.Name & ", "
-            csvBody &= c.EmailAddress & vbCr
+            csv.Append(String.Format("{0},{1},{2}", c.Company, c.Name, c.EmailAddress) & Environment.NewLine)
         Next
 
-        ViewBag.CsvReport = csvHeader & csvBody
+        ViewBag.CsvReport = csv
 
         Return View()
 
